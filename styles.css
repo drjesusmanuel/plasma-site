@@ -1,0 +1,93 @@
+@import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;600&family=IBM+Plex+Serif:wght@300;400&display=swap');
+
+:root{
+  --plasma-orange:#FF6A00; /* cor principal do logótipo */
+  --plasma-ember:#FF8C42;  /* tom de destaque/hover */
+  --plasma-black:#000000;
+  --plasma-white:#FFFFFF;
+}
+
+*{margin:0;padding:0;box-sizing:border-box}
+
+body{
+  font-family:'IBM Plex Serif', serif;
+  background: var(--plasma-orange);
+  color: var(--plasma-white);
+  line-height:1.6;
+}
+
+/* Navegação inspirada no módulo “barra” do logótipo */
+nav{
+  display:flex;
+  gap:2rem;
+  padding:1rem 2rem;
+  backdrop-filter:blur(6px);
+}
+
+nav a{
+  color:var(--plasma-white);
+  text-decoration:none;
+  font-family:'Space Grotesk',sans-serif;
+  position:relative;
+}
+
+nav a::after{
+  content:'';
+  position:absolute;
+  right:-1rem;top:0;
+  width:2px;height:100%;
+  background:var(--plasma-white);
+}
+
+/* Hero */
+.logo{
+  width:120px;
+  margin-bottom:1rem;
+}
+
+.hero{
+  min-height:70vh;
+  display:flex;
+  flex-direction:column;
+  justify-content:center;
+  align-items:center;
+  text-align:center;
+  padding:3rem 1rem;
+}
+
+h1{
+  font-family:'Space Grotesk',sans-serif;
+  font-size:clamp(3rem,8vw,6rem);
+  letter-spacing:-.03em;
+  filter:brightness(1.1);
+  animation:pulse 8s infinite alternate ease-in-out;
+}
+
+.subtitle{
+  margin-top:.5rem;
+  font-size:1.25rem;
+  font-style:italic;
+}
+
+section{
+  padding:4rem 2rem;
+}
+
+h2{
+  font-family:'Space Grotesk',sans-serif;
+  font-size:2rem;
+  margin-bottom:1rem;
+}
+
+footer{
+  text-align:center;
+  padding:2rem 1rem;
+  background:var(--plasma-black);
+  color:var(--plasma-white);
+}
+
+/* Animação suave inspirada na “serpente” */
+@keyframes pulse{
+  from{filter:brightness(1)}
+  to{filter:brightness(1.3)}
+}
